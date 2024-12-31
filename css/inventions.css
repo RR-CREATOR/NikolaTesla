@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,300&family=Poppins:wght@300&family=Ubuntu&display=swap');
+@font-face {
+  font-family: Sailec;
+  src: url(/SailecBold.ttf);
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content:center;
+    align-items: center;
+    gap:5rem;
+    
+}
+
+.backdrop{
+    background-color: #e7524c;
+    width: 30rem;
+    height:90vh;
+    position: relative;
+    bottom:5vh;
+   display: flex;
+   animation: slideInTop .5s ease-out 0s;
+   z-index: 50;
+}
+
+@keyframes slideInTop {
+    0% {
+        scale: 1;
+      transform: translateY(-100%);
+    }
+    100% {
+        scale: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes slideIn {
+    0% {
+      transform: translate(35rem , -350%);
+    }
+    50% {
+      transform: translate(35rem,0);
+    }
+    100% {
+        transform: translate(0,0);
+      }
+}
+
+.backdrop > .tesla_coill{
+    background-image: url("../public/images/tesla_coil_low_poly_1.png");
+    width: 30rem;
+    height:90vh;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.backdrop > .tesla_turbinee{
+    background-image: url("../public/images/tesla_turbine_2.png");
+    width: 30rem;
+    height:90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.backdrop > .tesla_ac{
+    background-image: url("../public/images/ac_power_1_low.png");
+    width: 30rem;
+    height:90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.backdrop > .induction_motorr{
+    background-image: url("../public/images/induction_motor_2.png");
+    width: 30rem;
+    height:90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text{
+    
+    
+    animation: slideIn .8s ease-in-out ;
+    animation-fill-mode: backwards;
+    z-index: 49;
+    font-family: Sailec;
+    color: white;
+    width: 30rem; 
+    
+}
+.heading{
+    font-size: 36px;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+.para{
+    font-size: 18px;
+    margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 800px){
+    .backdrop{
+        background-color: #e7524c;
+        width: 85vw;
+        height:90vh;
+        position: relative;
+       
+    }
+    .text{
+        font-family: Sailec;
+        color: white;
+        width: 85vw;
+      
+    }
+    .heading{
+        font-size: 24px;
+        margin-top: 1rem;
+       
+    }
+    .para{
+        font-size: 12px;
+    }
+    .backdrop > .tesla_coill{
+        width: 85vw;
+        height:90vh;
+        background-size: contain;
+        background-position: center;
+    }
+    .backdrop > .tesla_turbinee{
+        width: 85vw;
+        height:90vh;
+        background-size: contain;
+        background-position: center;
+    }
+    .container{
+        gap: 0rem;
+    }
+}
